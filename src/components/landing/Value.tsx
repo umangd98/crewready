@@ -1,11 +1,11 @@
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Faster hiring – workers delivered in 24-48 hours",
-  "Lower no-shows with pre-vetted candidates",
-  "No job posting fees",
-  "No long-term contracts",
-  "Pay only when you hire",
+  "Fill your crew in 48 hours, not 2 weeks",
+  "Workers who actually show up and stay",
+  "No subscriptions or monthly fees—pay per hire only",
+  "No contracts—use us when you need us",
+  "Skip the job boards and endless interviews",
 ];
 
 const Value = () => {

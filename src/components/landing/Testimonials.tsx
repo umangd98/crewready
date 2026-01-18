@@ -3,23 +3,23 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "CrewReady saved us so much time. We got 3 qualified workers within 2 days and they've been with us for months now.",
+      "We needed 3 irrigation techs for a big commercial project. Had them working within 48 hours. All three are still with us 4 months later.",
     name: "Mike Rodriguez",
-    role: "Owner",
+    role: "Owner, 12-person crew",
     company: "Green Valley Landscaping",
   },
   {
     quote:
-      "The quality of candidates is night and day compared to what we were getting from job boards. Highly recommend.",
+      "Used to spend 15+ hours a week screening applicants. Now I submit a request and get 5 solid candidates by end of day. Saves me a full day every week.",
     name: "Sarah Chen",
     role: "Operations Manager",
     company: "AquaFlow Irrigation",
   },
   {
     quote:
-      "Finally, a hiring solution that understands the landscaping industry. No more wasted hours on unqualified applicants.",
+      "The no-show rate dropped to basically zero. Before CrewReady, we'd have workers ghost us constantly. Now they actually show up ready to work.",
     name: "David Thompson",
-    role: "Owner",
+    role: "Owner, 8-person crew",
     company: "Thompson Property Services",
   },
 ];

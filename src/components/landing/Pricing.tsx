@@ -8,24 +8,28 @@ interface PricingProps {
 const plans = [
   {
     name: "Pay Per Hire",
-    description: "Perfect for occasional hiring needs",
+    price: "$299–$499",
+    priceDetail: "per successful hire",
+    description: "No risk. Pay only when someone starts work.",
     features: [
-      "Pay only when you hire",
-      "No upfront costs",
-      "Pre-vetted candidates",
-      "24-48 hour delivery",
+      "Zero upfront costs",
+      "No monthly fees or contracts",
+      "Pre-vetted candidates in 48 hours",
+      "Pay only if they start working",
     ],
     cta: "Get Started",
     highlighted: false,
   },
   {
     name: "Monthly Plan",
-    description: "Best for recurring hiring needs",
+    price: "$199–$399",
+    priceDetail: "per hire + $99/month",
+    description: "Save 25%+ on hiring costs with regular needs.",
     features: [
-      "Discounted per-hire rates",
-      "Priority candidate matching",
-      "Dedicated account support",
-      "Replacement guarantee",
+      "Lower per-hire rate",
+      "Priority candidate delivery",
+      "90-day replacement guarantee",
+      "Dedicated account manager",
     ],
     cta: "Contact Us",
     highlighted: true,
@@ -41,7 +45,7 @@ const Pricing = ({ onOpenContactModal }: PricingProps) => {
             Simple, Transparent Pricing
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Choose the plan that works best for your business.
+            No hidden fees. No surprises. Pay only when workers start.
           </p>
         </div>
 
@@ -58,6 +62,10 @@ const Pricing = ({ onOpenContactModal }: PricingProps) => {
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 {plan.name}
               </h3>
+              <div className="mb-4">
+                <p className="text-3xl font-bold text-foreground">{plan.price}</p>
+                <p className="text-sm text-muted-foreground">{plan.priceDetail}</p>
+              </div>
               <p className="text-muted-foreground mb-6">{plan.description}</p>
 
               <ul className="space-y-3 mb-8">
@@ -81,14 +89,14 @@ const Pricing = ({ onOpenContactModal }: PricingProps) => {
         </div>
 
         <p className="text-center text-muted-foreground mt-8">
-          Custom pricing available based on volume.{" "}
+          Hiring 5+ workers per month?{" "}
           <button
             onClick={onOpenContactModal}
             className="text-primary hover:underline font-medium"
           >
             Contact us
           </button>{" "}
-          to learn more.
+          for volume pricing.
         </p>
       </div>
     </section>

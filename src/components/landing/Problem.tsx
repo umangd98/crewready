@@ -3,21 +3,21 @@ import { UserX, Clock, Search } from "lucide-react";
 const problems = [
   {
     icon: UserX,
-    title: "Low Quality Applicants",
+    title: "Bad Applicants Waste Your Time",
     description:
-      "Sorting through unqualified candidates wastes valuable time and resources.",
+      "Unqualified workers show up. You train them. They can't do the job. Repeat.",
   },
   {
     icon: Clock,
-    title: "No-Shows & High Churn",
+    title: "No-Shows Kill Your Schedule",
     description:
-      "Workers who don't show up or leave after a few days disrupt your operations.",
+      "Worker doesn't show Monday morning. Now your whole week is behind and clients are upset.",
   },
   {
     icon: Search,
-    title: "Time Wasted on Screening",
+    title: "Endless Screening Gets You Nowhere",
     description:
-      "Hours spent interviewing and vetting candidates that don't work out.",
+      "Hours on calls and interviews. Most quit after a few days. You're back to square one.",
   },
 ];
 
