@@ -28,10 +28,12 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
       <div className="container container-padding">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-bold text-primary">
-              Crew<span className="text-secondary">Ready</span>
-            </span>
+          <a href="#" className="flex items-center">
+            <img 
+              src="/crewreadylogo-cropped.png" 
+              alt="CrewReady - Hire Smarter" 
+              className="w-48 md:w-56 h-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
