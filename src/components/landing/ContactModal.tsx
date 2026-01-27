@@ -27,7 +27,7 @@ const contactSchema = z.object({
   workersCount: z.string().min(1, "Please select number of workers"),
   startDate: z.string().min(1, "Please select start timeline"),
   payRange: z.string().min(1, "Please select pay range"),
-  city: z.string().trim().min(1, "City is required").max(100),
+  address: z.string().trim().min(1, "Reporting address is required").max(200),
   zipCode: z.string().trim().regex(/^\d{5}$/, "Please enter a valid 5-digit ZIP code"),
   requirements: z.array(z.string()).optional(),
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -52,7 +52,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
     workersCount: "",
     startDate: "",
     payRange: "",
-    city: "",
+    address: "",
     zipCode: "",
     requirements: [],
     name: "",
@@ -123,7 +123,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       workersCount: "",
       startDate: "",
       payRange: "",
-      city: "",
+      address: "",
       zipCode: "",
       requirements: [],
       name: "",
@@ -263,17 +263,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               {/* Section 5: Location */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="city" className="text-base">City *</Label>
+                  <Label htmlFor="address" className="text-base">Reporting Address *</Label>
                   <Input
-                    id="city"
-                    name="city"
-                    value={formData.city}
+                    id="address"
+                    name="address"
+                    value={formData.address}
                     onChange={handleInputChange}
-                    placeholder="e.g., Austin"
+                    placeholder="e.g., 123 Main St, Austin"
                     className="h-12"
                   />
-                  {errors.city && (
-                    <p className="text-sm text-destructive">{errors.city}</p>
+                  {errors.address && (
+                    <p className="text-sm text-destructive">{errors.address}</p>
                   )}
                 </div>
                 <div className="space-y-2">

@@ -15,10 +15,10 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <a
-              href="mailto:hello@crewready.com"
+              href="mailto:joe@crewready.ai"
               className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
-              hello@crewready.com
+              joe@crewready.ai
             </a>
             <p className="text-sm text-muted-foreground mt-1">
               © {currentYear} CrewReady. All rights reserved.
