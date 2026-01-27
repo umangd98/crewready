@@ -14,16 +14,18 @@ const Hero = ({ onOpenContactModal }: HeroProps) => {
   };
 
   return (
-    <section className="pt-24 pb-12 md:pt-40 md:pb-24">
+    <section className="pt-20 pb-10 md:pt-40 md:pb-24">
       <div className="container container-padding">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-[2.25rem] leading-tight md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-5">
-            Get Reliable Field Workers{" "}
-            <span className="text-primary">in 48 Hours or Less.</span>
+            AI-Powered Matching for{" "}
+            <span className="text-primary">Faster Field Hiring.</span>
           </h1>
           <p className="text-[1.0625rem] leading-relaxed md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Pre-screened landscaping and irrigation workers ready to start. 
-            No more no-shows, bad hires, or wasted time.
+            Access pre-screened candidates for landscaping and irrigation roles. AI-driven matching with human verification.
+          </p>
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+            Faster pipeline. Less screening.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button size="lg" onClick={onOpenContactModal} className="text-base">

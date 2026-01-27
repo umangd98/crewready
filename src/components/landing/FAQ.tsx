@@ -7,34 +7,34 @@ import {
 
 const faqs = [
   {
-    question: "How quickly can I get workers?",
+    question: "How fast is the matching process?",
     answer:
-      "Most clients receive pre-vetted candidates within 24-48 hours of submitting their request. For urgent needs, we offer expedited matching services.",
+      "Most requests receive 3–5 candidate matches within 24–48 hours. Timing depends on role requirements and candidate availability in your area.",
   },
   {
     question: "What roles do you fill?",
     answer:
-      "We specialize in landscaping and irrigation roles including lawn care technicians, landscape laborers, irrigation installers, maintenance workers, crew leaders, and equipment operators.",
+      "We focus on landscaping and irrigation roles: lawn care technicians, landscape laborers, irrigation installers, maintenance workers, crew leaders, and equipment operators.",
   },
   {
-    question: "How does your screening process work?",
+    question: "How does screening work?",
     answer:
-      "We use a combination of AI-powered screening and human verification. Candidates go through skills assessments, background checks, work history verification, and reference checks before being matched with your company.",
+      "Our AI filters candidates by experience, skills, and availability. We verify work history and check references before presenting matches to you.",
   },
   {
-    question: "What are the costs?",
+    question: "What does it cost?",
     answer:
-      "We offer flexible pricing including pay-per-hire and monthly subscription plans. There are no upfront fees or job posting costs. You only pay when you successfully hire a candidate.",
+      "Pay-per-hire pricing ranges from $299–$499 per completed hire. Monthly plans start at $99/month with reduced per-hire fees. No upfront costs or job posting fees.",
   },
   {
-    question: "Is there a minimum commitment?",
+    question: "Is there a contract?",
     answer:
-      "No. Our pay-per-hire model has no minimum commitment. Monthly plans are available for businesses with recurring hiring needs and offer discounted rates.",
+      "No contract required for pay-per-hire. Monthly plans are month-to-month and can be canceled anytime.",
   },
   {
-    question: "What if a worker doesn't work out?",
+    question: "What if a hire doesn't work out?",
     answer:
-      "We offer a replacement guarantee. If a worker doesn't meet expectations within the first 30 days, we'll find you a replacement at no additional cost.",
+      "Monthly plan includes 30-day replacement support. We'll provide additional candidates at no extra fee if a hire leaves within 30 days.",
   },
 ];
 

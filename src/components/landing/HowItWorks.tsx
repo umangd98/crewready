@@ -3,28 +3,28 @@ const steps = [
     number: "1",
     title: "Submit job request",
     description:
-      "Tell us your needs in 2 minutes.",
+      "Complete a brief form in under 2 minutes.",
     microcopy: "",
   },
   {
     number: "2",
-    title: "Get 5 pre-vetted candidates",
+    title: "AI screens and matches candidates",
     description:
-      "Receive profiles in 4–6 hours.",
-    microcopy: "All confirmed available for your start date.",
+      "Receive 3–5 matched profiles within 4–6 hours.",
+    microcopy: "Matching considers role requirements, location, availability, and pay alignment.",
   },
   {
     number: "3",
-    title: "Interview or request more",
+    title: "Review and interview",
     description:
-      "Choose who to interview or ask for more options.",
-    microcopy: "Quick calls help confirm fit.",
+      "Interview selected candidates to assess fit.",
+    microcopy: "Interviews help reduce mismatches and improve outcomes.",
   },
   {
     number: "4",
-    title: "Start within 48 hours",
+    title: "Finalize hire and onboard",
     description:
-      "Workers are ready when you are.",
+      "Complete hiring decision and begin onboarding.",
     microcopy: "",
   },
 ];
@@ -35,31 +35,35 @@ const HowItWorks = () => {
       <div className="container container-padding">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            How CrewReady Works
+            How It Works
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Four simple steps to get qualified workers on your team.
+            A structured hiring pipeline from request to hire.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-6">
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground text-xl md:text-2xl font-bold flex items-center justify-center mx-auto mb-5">
                 {step.number}
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground mb-2">{step.description}</p>
+              <p className="text-sm md:text-base text-muted-foreground mb-2">{step.description}</p>
               {step.microcopy && (
-                <p className="text-sm text-muted-foreground/80 italic">
+                <p className="text-xs md:text-sm text-muted-foreground/80 italic">
                   {step.microcopy}
                 </p>
               )}
             </div>
           ))}
         </div>
+
+        <p className="text-center text-xs md:text-sm text-muted-foreground/70 mt-8 max-w-3xl mx-auto">
+          Hiring timelines and outcomes depend on role requirements and local candidate availability.
+        </p>
       </div>
     </section>
   );

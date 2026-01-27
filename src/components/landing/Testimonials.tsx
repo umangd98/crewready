@@ -3,23 +3,23 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "We needed 3 irrigation techs for a big commercial project. Had them working within 48 hours. All three are still with us 4 months later.",
+      "The screening process saved us considerable time. We received qualified candidates quickly and hired two workers who have been reliable additions to our crew.",
     name: "Mike Rodriguez",
-    role: "Owner, 12-person crew",
+    role: "Owner",
     company: "Green Valley Landscaping",
   },
   {
     quote:
-      "Used to spend 15+ hours a week screening applicants. Now I submit a request and get 5 solid candidates by end of day. Saves me a full day every week.",
+      "CrewReady reduced our time spent on initial screening. The candidates we interviewed were better matched to our needs than typical job board applicants.",
     name: "Sarah Chen",
     role: "Operations Manager",
     company: "AquaFlow Irrigation",
   },
   {
     quote:
-      "The no-show rate dropped to basically zero. Before CrewReady, we'd have workers ghost us constantly. Now they actually show up ready to work.",
+      "The turnaround was faster than posting on job boards. Candidates seemed more serious and the overall hiring experience was smoother.",
     name: "David Thompson",
-    role: "Owner, 8-person crew",
+    role: "Owner",
     company: "Thompson Property Services",
   },
 ];
@@ -43,8 +43,8 @@ const Testimonials = () => {
               key={index}
               className="bg-card p-6 md:p-8 rounded-lg border border-border shadow-sm"
             >
-              <Quote className="h-8 w-8 text-primary/20 mb-4" />
-              <p className="text-foreground mb-6 leading-relaxed">
+              <Quote className="h-7 w-7 md:h-8 md:w-8 text-primary/20 mb-3 md:mb-4" />
+              <p className="text-sm md:text-base text-foreground mb-5 md:mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </p>
               <div>

@@ -3,21 +3,21 @@ import { UserX, Clock, Search } from "lucide-react";
 const problems = [
   {
     icon: UserX,
-    title: "Bad Applicants Waste Your Time",
+    title: "Low Quality Applicants",
     description:
-      "Unqualified workers show up. You train them. They can't do the job. Repeat.",
+      "Job boards attract candidates with limited experience or mismatched skills. Unqualified applicants reduce hiring efficiency.",
   },
   {
     icon: Clock,
-    title: "No-Shows Kill Your Schedule",
+    title: "Unreliable Availability",
     description:
-      "Worker doesn't show Monday morning. Now your whole week is behind and clients are upset.",
+      "Candidates often drop out mid-process or become unavailable, forcing teams to restart hiring. Gaps in availability delay projects and disrupt schedules.",
   },
   {
     icon: Search,
-    title: "Endless Screening Gets You Nowhere",
+    title: "Too Much Manual Screening",
     description:
-      "Hours on calls and interviews. Most quit after a few days. You're back to square one.",
+      "Reviewing resumes, conducting phone screens, and checking references manually is time-consuming. It pulls you away from operations.",
   },
 ];
 
@@ -27,11 +27,10 @@ const Problem = () => {
       <div className="container container-padding">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Hiring Field Crews Is Broken
+            Traditional Field Hiring Is Inefficient
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Traditional hiring methods don't work for landscaping and irrigation
-            businesses.
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            Manual screening and low candidate quality slow your pipeline. CrewReady streamlines the process.
           </p>
         </div>
 
@@ -44,10 +43,10 @@ const Problem = () => {
               <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
                 <problem.icon className="h-6 w-6 text-destructive" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">
                 {problem.title}
               </h3>
-              <p className="text-muted-foreground">{problem.description}</p>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{problem.description}</p>
             </div>
           ))}
         </div>

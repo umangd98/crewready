@@ -1,11 +1,11 @@
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Fill your crew in 48 hours, not 2 weeks",
-  "Workers who actually show up and stay",
-  "No subscriptions or monthly fees—pay per hire only",
-  "No contracts—use us when you need us",
-  "Skip the job boards and endless interviews",
+  "Faster access to qualified candidates",
+  "Reduced screening workload",
+  "Structured matching based on job requirements",
+  "No subscriptions or long-term contracts",
+  "Pay when moving forward with a hire",
 ];
 
 const Value = () => {
@@ -18,18 +18,18 @@ const Value = () => {
               Why Businesses Choose CrewReady
             </h2>
             <p className="text-muted-foreground text-lg">
-              We make hiring field workers simple, fast, and risk-free.
+              Built for Faster, More Efficient Hiring
             </p>
           </div>
 
-          <div className="bg-card p-8 md:p-10 rounded-lg border border-border shadow-sm">
-            <ul className="space-y-4">
+          <div className="bg-card p-6 md:p-10 rounded-lg border border-border shadow-sm">
+            <ul className="space-y-3.5">
               {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-4">
+                <li key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="h-4 w-4 text-secondary" />
                   </div>
-                  <span className="text-foreground text-lg">{benefit}</span>
+                  <span className="text-foreground text-base md:text-lg">{benefit}</span>
                 </li>
               ))}
             </ul>
