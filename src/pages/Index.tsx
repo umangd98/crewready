@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCanonicalUrl } from "@/hooks/use-canonical-url";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import Problem from "@/components/landing/Problem";
@@ -13,6 +14,7 @@ import Footer from "@/components/landing/Footer";
 import ContactModal from "@/components/landing/ContactModal";
 
 const Index = () => {
+  useCanonicalUrl();
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const openContactModal = () => setIsContactModalOpen(true);

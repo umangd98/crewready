@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface HeaderProps {
   onOpenContactModal: () => void;
@@ -8,11 +14,17 @@ interface HeaderProps {
 
 const Header = ({ onOpenContactModal }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
 
   const navLinks = [
     { label: "How It Works", href: "#how-it-works" },
     { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
+  ];
+
+  const resourceLinks = [
+    { label: "Case Study", href: "/case-study.pdf" },
+    { label: "Service Brochure", href: "/service-brochure.pdf" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -30,7 +42,7 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
           {/* Logo */}
           <a href="#" className="flex items-center">
             <img 
-              src="/crewreadylogo-cropped.png" 
+              src="/logos/optimzied-02.png" 
               alt="CrewReady - Hire Smarter" 
               className="w-48 md:w-56 h-auto"
             />
@@ -47,6 +59,29 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
                 {link.label}
               </button>
             ))}
+            
+            {/* Resources Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+                Resources
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                {resourceLinks.map((link) => (
+                  <DropdownMenuItem key={link.href} asChild>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer"
+                    >
+                      {link.label}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button onClick={onOpenContactModal} size="sm">
               Request Workers
             </Button>
@@ -79,6 +114,33 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
                   {link.label}
                 </button>
               ))}
+              
+              {/* Mobile Resources Dropdown */}
+              <div>
+                <button
+                  onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+                  className="flex items-center justify-between w-full text-muted-foreground hover:text-foreground transition-colors text-sm font-medium text-left"
+                >
+                  Resources
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isMobileResourcesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isMobileResourcesOpen && (
+                  <div className="mt-2 ml-4 flex flex-col gap-2">
+                    {resourceLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <Button onClick={onOpenContactModal} className="w-full mt-2">
                 Request Workers
               </Button>
