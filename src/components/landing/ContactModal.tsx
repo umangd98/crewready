@@ -105,15 +105,75 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       return;
     }
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setIsLoading(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Request submitted!",
-      description: "We're matching you with candidates now.",
-    });
+    try {
+      // Send email using Web3Forms (free service, no backend needed)
+      const web3FormsResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "1db3ebb0-0c6d-4ccc-80ca-5962d359f9aa", // Replace with your key from https://web3forms.com
+          subject: `New Worker Request from ${formData.name}`,
+          from_name: "CrewReady Website",
+          to: "umangd98@gmail.com",
+          // Form data
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          role: formData.role,
+          workers_count: formData.workersCount,
+          start_date: formData.startDate,
+          pay_range: formData.payRange,
+          address: formData.address,
+          zip_code: formData.zipCode,
+          requirements: formData.requirements?.join(", ") || "None",
+          // Email body
+          message: `
+New Worker Request Submitted
+
+Contact Information:
+- Name: ${formData.name}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+
+Job Requirements:
+- Role: ${formData.role}
+- Number of Workers: ${formData.workersCount}
+- Start Date: ${formData.startDate}
+- Pay Range: ${formData.payRange}
+
+Location:
+- Address: ${formData.address}
+- ZIP Code: ${formData.zipCode}
+
+Special Requirements: ${formData.requirements?.join(", ") || "None"}
+          `.trim(),
+        }),
+      });
+
+      const web3FormsResult = await web3FormsResponse.json();
+
+      if (!web3FormsResult.success) {
+        throw new Error("Failed to send email");
+      }
+
+      setIsLoading(false);
+      setIsSubmitted(true);
+      toast({
+        title: "Request submitted!",
+        description: "We're matching you with candidates now.",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsLoading(false);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly at joe@crewready.ai",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleClose = () => {
