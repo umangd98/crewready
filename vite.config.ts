@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  esbuild: mode === 'production' ? { drop: ['console', 'debugger'] } : {},
   build: {
     rollupOptions: {
       output: {
@@ -29,12 +30,5 @@ export default defineConfig(({ mode }) => ({
       },
     },
     cssCodeSplit: true,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-        drop_debugger: mode === 'production',
-      },
-    },
   },
 }));
