@@ -1,4 +1,4 @@
-import { Linkedin, Facebook, Mail, Phone } from "lucide-react";
+import { Linkedin, Facebook, Mail, Phone, Instagram, Youtube } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Social Links & Legal */}
           <div className="text-center md:text-right">
             <h3 className="text-sm font-semibold text-foreground mb-3">Follow Us</h3>
-            <div className="flex items-center justify-center md:justify-end gap-4 mb-4">
+            <div className="flex items-center justify-center md:justify-end gap-4 mb-4 flex-wrap">
               <a
                 href="https://www.linkedin.com/company/crewready/"
                 target="_blank"
@@ -52,20 +52,40 @@ const Footer = () => {
                 LinkedIn
               </a>
               <a
-                href="#"
+                href="https://x.com/crewready87784"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 <FaXTwitter className="h-5 w-5" />
                 X
               </a>
               <a
-                href="https://www.facebook.com/people/CrewReady/61587608713278/"
+                href="https://www.facebook.com/share/1AgntqRmTt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 <Facebook className="h-5 w-5" />
                 Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/crewready.ai?igsh=ajJuMmpqbmFkZ3Y4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+              >
+                <Instagram className="h-5 w-5" />
+                Instagram
+              </a>
+              <a
+                href="http://www.youtube.com/@CrewReady"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+              >
+                <Youtube className="h-5 w-5" />
+                YouTube
               </a>
             </div>
             <div className="flex flex-col md:items-end gap-1">
