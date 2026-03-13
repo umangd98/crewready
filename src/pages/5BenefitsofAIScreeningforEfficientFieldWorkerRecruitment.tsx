@@ -28,9 +28,9 @@ const AIScreeningforEfficientFieldWorkerRecruitment = () => {
               5 Benefits of AI Screening for Efficient Field Worker Recruitment
             </h1>
 
-            <p className="text-sm opacity-90">
+            {/* <p className="text-sm opacity-90">
               March 13, 2026 · 5 min read
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

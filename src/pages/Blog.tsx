@@ -22,8 +22,8 @@ const Blog = () => {
       title: "5 Benefits of AI Screening for Efficient Field Worker Recruitment",
       // excerpt:
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "March 13, 2026",
-      readTime: "5 min read",
+      // date: "March 13, 2026",
+      // readTime: "5 min read",
       image: blog1,
       link: "/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment",
     },
@@ -85,8 +85,8 @@ const Blog = () => {
                 <div className="p-6 flex flex-col flex-1">
 
                   <div className="flex justify-between text-sm text-muted-foreground mb-3">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
+                    {/* <span>{post.date}</span> */}
+                    {/* <span>{post.readTime}</span> */}
                   </div>
 
                   <h2 className="text-xl font-semibold mb-3 leading-snug">
