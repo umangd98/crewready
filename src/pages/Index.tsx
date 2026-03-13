@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useCanonicalUrl } from "@/hooks/use-canonical-url";
-import Header from "@/components/landing/Header";
+
 import Hero from "@/components/landing/Hero";
 import Problem from "@/components/landing/Problem";
 import HowItWorks from "@/components/landing/HowItWorks";
@@ -10,33 +11,39 @@ import Audience from "@/components/landing/Audience";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import CTA from "@/components/landing/CTA";
-import Footer from "@/components/landing/Footer";
-import ContactModal from "@/components/landing/ContactModal";
 
-const Index = () => {
+interface IndexProps {
+  onOpenContactModal: () => void;
+}
+
+const Index = ({ onOpenContactModal }: IndexProps) => {
   useCanonicalUrl();
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const location = useLocation();
 
-  const openContactModal = () => setIsContactModalOpen(true);
-  const closeContactModal = () => setIsContactModalOpen(false);
+  // Scroll to section when navigating from other pages
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.querySelector(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header onOpenContactModal={openContactModal} />
-      <main>
-        <Hero onOpenContactModal={openContactModal} />
-        <Problem />
-        <HowItWorks />
-        <Value />
-        <Testimonials />
-        <Audience />
-        <Pricing onOpenContactModal={openContactModal} />
-        <FAQ />
-        <CTA onOpenContactModal={openContactModal} />
-      </main>
-      <Footer />
-      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
-    </div>
+    <main className="min-h-screen bg-background">
+      <Hero onOpenContactModal={onOpenContactModal} />
+      <Problem />
+      <HowItWorks />
+      <Value />
+      <Testimonials />
+      <Audience />
+      <Pricing onOpenContactModal={onOpenContactModal} />
+      <FAQ />
+      <CTA onOpenContactModal={onOpenContactModal} />
+    </main>
   );
 };
 

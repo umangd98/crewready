@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +17,9 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navLinks = [
     { label: "How It Works", href: "#how-it-works" },
     { label: "Pricing", href: "#pricing" },
@@ -23,15 +27,22 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
   ];
 
   const resourceLinks = [
+    { label: "Blog", href: "/blog", internal: true },
     { label: "Case Study", href: "/case-study.pdf" },
     { label: "Service Brochure", href: "/service-brochure.pdf" },
   ];
 
   const scrollToSection = (href: string) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: href } });
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+
     setIsMobileMenuOpen(false);
   };
 
@@ -39,14 +50,15 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container container-padding">
         <div className="flex items-center justify-between h-16 md:h-20">
+
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <img 
-              src="/logos/optimzied-02.png" 
-              alt="CrewReady - Hire Smarter" 
+          <Link to="/" className="flex items-center">
+            <img
+              src="/logos/optimzied-02.png"
+              alt="CrewReady - Hire Smarter"
               className="w-48 md:w-56 h-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -59,24 +71,28 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
                 {link.label}
               </button>
             ))}
-            
+
             {/* Resources Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 Resources
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
+
               <DropdownMenuContent align="end" className="w-48">
                 {resourceLinks.map((link) => (
                   <DropdownMenuItem key={link.href} asChild>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cursor-pointer"
-                    >
-                      {link.label}
-                    </a>
+                    {link.internal ? (
+                      <Link to={link.href}>{link.label}</Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -105,6 +121,7 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
         {isMobileMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
+
               {navLinks.map((link) => (
                 <button
                   key={link.href}
@@ -114,29 +131,47 @@ const Header = ({ onOpenContactModal }: HeaderProps) => {
                   {link.label}
                 </button>
               ))}
-              
+
               {/* Mobile Resources Dropdown */}
               <div>
                 <button
-                  onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+                  onClick={() =>
+                    setIsMobileResourcesOpen(!isMobileResourcesOpen)
+                  }
                   className="flex items-center justify-between w-full text-muted-foreground hover:text-foreground transition-colors text-sm font-medium text-left"
                 >
                   Resources
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isMobileResourcesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform ${
+                      isMobileResourcesOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
+
                 {isMobileResourcesOpen && (
                   <div className="mt-2 ml-4 flex flex-col gap-2">
-                    {resourceLinks.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
+                    {resourceLinks.map((link) =>
+                      link.internal ? (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                        >
+                          {link.label}
+                        </a>
+                      )
+                    )}
                   </div>
                 )}
               </div>
