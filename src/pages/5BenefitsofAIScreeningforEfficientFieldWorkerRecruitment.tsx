@@ -29,7 +29,7 @@ const AIScreeningforEfficientFieldWorkerRecruitment = () => {
             </h1>
 
             <p className="text-sm opacity-90">
-              March 12, 2026 · 5 min read
+              March 13, 2026 · 5 min read
             </p>
           </div>
         </div>
@@ -205,9 +205,9 @@ const AIScreeningforEfficientFieldWorkerRecruitment = () => {
         </p>
 
         {/* Conclusion */}
-        <h2 className="text-2xl font-semibold mt-10 mb-4">
+        <h3 className="text-xl font-semibold mt-10 mb-4">
           A More Structured Approach to Field Hiring
-        </h2>
+        </h3>
 
         <p className="mb-6">
           Efficient hiring is rarely about generating more applications. It is about

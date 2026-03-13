@@ -22,7 +22,7 @@ const Blog = () => {
       title: "5 Benefits of AI Screening for Efficient Field Worker Recruitment",
       // excerpt:
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "March 12, 2026",
+      date: "March 13, 2026",
       readTime: "5 min read",
       image: blog1,
       link: "/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment",
