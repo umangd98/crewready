@@ -20,16 +20,6 @@ const Blog = () => {
 
   const posts = [
     {
-      id: 1,
-      title: "5 Benefits of AI Screening for Efficient Field Worker Recruitment",
-      // excerpt:
-      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      // date: "March 13, 2026",
-      // readTime: "5 min read",
-      image: blog1,
-      link: "/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment",
-    },
-    {
       id: 2,
       title: "7 Common Problems in Field Worker Hiring for Landscaping Companies",
       // excerpt:
@@ -38,7 +28,20 @@ const Blog = () => {
       // readTime: "5 min read",
       image: blog2,
       link: "/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies",
+      alt: "Landscaping Companies",
     },
+    {
+      id: 1,
+      title: "5 Benefits of AI Screening for Efficient Field Worker Recruitment",
+      // excerpt:
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      // date: "March 13, 2026",
+      // readTime: "5 min read",
+      image: blog1,
+      link: "/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment",
+      alt: "AI Screening",
+    },
+    
   ];
 
   return (
@@ -61,7 +64,7 @@ const Blog = () => {
         {/* Background Image */}
         <img
           src={banner}
-          alt="Blog Banner"
+          alt="Blog"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
@@ -98,7 +101,7 @@ const Blog = () => {
                 <div className="h-52 overflow-hidden">
                   <img
                     src={post.image}
-                    alt={post.title}
+                    alt={post.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
