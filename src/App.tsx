@@ -15,9 +15,11 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Blog = lazy(() => import("./pages/Blog"));
 const AIScreeningforEfficientFieldWorkerRecruitment = lazy(() => import("./pages/5BenefitsofAIScreeningforEfficientFieldWorkerRecruitment"));
+const CommonProblemsinFieldWorkerHiringforLandscapingCompanies = lazy(() => import("./pages/7CommonProblemsinFieldWorkerHiringforLandscapingCompanies"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient();  
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -57,6 +59,11 @@ const App = () => {
               <Route
                 path="/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment"
                 element={<AIScreeningforEfficientFieldWorkerRecruitment />}
+              />
+
+              <Route
+                path="/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies"
+                element={<CommonProblemsinFieldWorkerHiringforLandscapingCompanies/>}
               />
 
               <Route path="*" element={<NotFound />} />

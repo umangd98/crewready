@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import blog1 from "@/assets/blog/blog1.jpg";
 // import banner from "@/assets/blog/banner.jpg";
@@ -12,6 +13,14 @@ const AIScreeningforEfficientFieldWorkerRecruitment = () => {
 
   return (
     <>
+    <Helmet>
+          <title>CrewReady - 5 Benefits of AI Screening for Efficient Field Worker Recruitment</title>
+          <meta
+            name="description"
+            content="5 Benefits of AI Screening for Efficient Field Worker Recruitment."
+          />
+        </Helmet>
+
       {/* Banner Section */}
       <section className="relative h-[280px] mt-[50px]">
         <img

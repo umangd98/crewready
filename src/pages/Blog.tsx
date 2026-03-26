@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -5,6 +6,7 @@ import { useEffect } from "react";
 // import Footer from "@/components/landing/Footer";
 
 import blog1 from "@/assets/blog/blog1.jpg";
+import blog2 from "@/assets/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies.jpg";
 import banner from "@/assets/blog/banner.jpg";
 
 const Blog = () => {
@@ -27,10 +29,29 @@ const Blog = () => {
       image: blog1,
       link: "/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment",
     },
+    {
+      id: 2,
+      title: "7 Common Problems in Field Worker Hiring for Landscaping Companies",
+      // excerpt:
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      // date: "March 13, 2026",
+      // readTime: "5 min read",
+      image: blog2,
+      link: "/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies",
+    },
   ];
 
   return (
     <>
+
+    <Helmet>
+      <title>CrewReady - Blog</title>
+      <meta
+        name="description"
+        content="Explore insights, updates, and helpful articles on AI-powered field hiring."
+      />
+    </Helmet>
+
       {/* Header */}
       {/* <Header onOpenContactModal={() => {}} /> */}
 
