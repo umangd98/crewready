@@ -31,8 +31,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://crewready.ai/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies</loc>
+    <loc>https://crewready.ai/blog/7-common-problems-in-field-worker-hiring-for-landscaping-companies</loc>
     <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://crewready.ai/blog/why-manual-screening-slows-down-landscaping-irrigation-hiring</loc>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

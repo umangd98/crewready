@@ -7,6 +7,8 @@ import { useEffect } from "react";
 
 import blog1 from "@/assets/blog/blog1.jpg";
 import blog2 from "@/assets/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies.jpg";
+import blog3 from "@/assets/blog/Why-Manual-Screening-Slows-Down-Landscaping-And-Irrigation-Hiring.webp";
+
 import banner from "@/assets/blog/banner.jpg";
 
 const Blog = () => {
@@ -19,6 +21,18 @@ const Blog = () => {
   }, []);
 
   const posts = [
+
+    {
+      id: 3,
+      title: "Why Manual Screening Slows Down Landscaping and Irrigation Hiring",
+      // excerpt:
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      // date: "March 13, 2026",
+      // readTime: "5 min read",
+      image: blog3,
+      link: "/blog/why-manual-screening-slows-down-landscaping-irrigation-hiring",
+      alt: "Landscaping Companies",
+    },
     {
       id: 2,
       title: "7 Common Problems in Field Worker Hiring for Landscaping Companies",
@@ -27,7 +41,7 @@ const Blog = () => {
       // date: "March 13, 2026",
       // readTime: "5 min read",
       image: blog2,
-      link: "/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies",
+      link: "/blog/7-common-problems-in-field-worker-hiring-for-landscaping-companies",
       alt: "Landscaping Companies",
     },
     {
