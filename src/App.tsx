@@ -17,6 +17,8 @@ const Blog = lazy(() => import("./pages/Blog"));
 const AIScreeningforEfficientFieldWorkerRecruitment = lazy(() => import("./pages/5BenefitsofAIScreeningforEfficientFieldWorkerRecruitment"));
 const CommonProblemsinFieldWorkerHiringforLandscapingCompanies = lazy(() => import("./pages/7CommonProblemsinFieldWorkerHiringforLandscapingCompanies"));
 const WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring = lazy(() => import("./pages/WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring"));
+const StructuringYourFieldHiringPipelineforMaximumEfficiency = lazy(() => import("./pages/StructuringYourFieldHiringPipelineforMaximumEfficiency"));
+
 
 
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -71,6 +73,11 @@ const App = () => {
               <Route
                 path="/blog/why-manual-screening-slows-down-landscaping-irrigation-hiring"
                 element={<WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring/>}
+              />
+
+              <Route
+                path="/blog/structuring-your-field-hiring-pipeline-for-maximum-efficiency"
+                element={<StructuringYourFieldHiringPipelineforMaximumEfficiency/>}
               />
 
               <Route path="*" element={<NotFound />} />

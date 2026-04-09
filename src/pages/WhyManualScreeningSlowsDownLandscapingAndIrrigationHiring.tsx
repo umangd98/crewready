@@ -30,7 +30,7 @@ const WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring = () => {
       <section className="relative h-[280px] mt-[50px]">
         <img
           src={blog1}
-          alt="Why Manual Screening Slows Down Landscaping And Irrigation Hiring"
+          alt="Landscaping and Irrigation Hiring"
             className="w-full h-full object-cover object-bottom"
         />
 

@@ -25,7 +25,7 @@ const AIScreeningforEfficientFieldWorkerRecruitment = () => {
       <section className="relative h-[280px] mt-[50px]">
         <img
           src={blog1}
-          alt="Field Worker"
+          alt="Field Worker Recruitment"
           className="w-full h-full object-cover"
         />
 

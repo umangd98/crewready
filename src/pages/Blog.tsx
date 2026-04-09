@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import blog1 from "@/assets/blog/blog1.jpg";
 import blog2 from "@/assets/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies.jpg";
 import blog3 from "@/assets/blog/Why-Manual-Screening-Slows-Down-Landscaping-And-Irrigation-Hiring.webp";
+import blog4 from "@/assets/blog/Field-Hiring.jpg";
+
 
 import banner from "@/assets/blog/banner.jpg";
 
@@ -23,6 +25,13 @@ const Blog = () => {
   const posts = [
 
     {
+      id: 4,
+      title: "Structuring Your Field Hiring Pipeline for Maximum Efficiency",
+      image: blog4,
+      link: "/blog/structuring-your-field-hiring-pipeline-for-maximum-efficiency",
+      alt: "Field Hiring",
+    },
+    {
       id: 3,
       title: "Why Manual Screening Slows Down Landscaping and Irrigation Hiring",
       // excerpt:
@@ -31,7 +40,7 @@ const Blog = () => {
       // readTime: "5 min read",
       image: blog3,
       link: "/blog/why-manual-screening-slows-down-landscaping-irrigation-hiring",
-      alt: "Landscaping Companies",
+      alt: "Landscaping and Irrigation Hiring",
     },
     {
       id: 2,
@@ -42,7 +51,7 @@ const Blog = () => {
       // readTime: "5 min read",
       image: blog2,
       link: "/blog/7-common-problems-in-field-worker-hiring-for-landscaping-companies",
-      alt: "Landscaping Companies",
+      alt: " Field Worker Hiring",
     },
     {
       id: 1,
@@ -53,7 +62,7 @@ const Blog = () => {
       // readTime: "5 min read",
       image: blog1,
       link: "/blog/5-benefits-of-ai-screening-for-efficient-field-worker-recruitment",
-      alt: "AI Screening",
+      alt: "Field Worker Recruitment",
     },
     
   ];

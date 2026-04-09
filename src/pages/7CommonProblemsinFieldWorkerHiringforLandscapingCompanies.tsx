@@ -30,7 +30,7 @@ const CommonProblemsinFieldWorkerHiringforLandscapingCompanies = () => {
       <section className="relative h-[280px] mt-[50px]">
         <img
           src={blog1}
-          alt="Field Worker Hiring"
+          alt=" Field Worker Hiring"
           className="w-full h-full object-cover"
         />
 
