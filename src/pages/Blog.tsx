@@ -6,6 +6,7 @@ import blog1 from "@/assets/blog/blog1.jpg";
 import blog2 from "@/assets/blog/7-Common-Problems-in-Field-Worker-Hiring-for-Landscaping-Companies.jpg";
 import blog3 from "@/assets/blog/Why-Manual-Screening-Slows-Down-Landscaping-And-Irrigation-Hiring.webp";
 import blog4 from "@/assets/blog/Field-Hiring.jpg";
+import blog5 from "@/assets/blog/AI-powered-hiring.jpg";
 import banner from "@/assets/blog/banner.jpg";
 
 const Blog = () => {
@@ -18,6 +19,13 @@ const Blog = () => {
   }, []);
 
   const posts = [
+    {
+      id: 5,
+      title: "How AI-Powered Hiring Reduces Operational Chaos in Irrigation and Landscaping Crews",
+      image: blog5,
+      link: "/blog/ai-powered-hiring-landscaping-irrigation-crews",
+      alt: "AI-powered hiring",
+    },
     {
       id: 4,
       title: "Structuring Your Field Hiring Pipeline for Maximum Efficiency",

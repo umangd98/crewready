@@ -18,6 +18,7 @@ const AIScreeningforEfficientFieldWorkerRecruitment = lazy(() => import("./pages
 const CommonProblemsinFieldWorkerHiringforLandscapingCompanies = lazy(() => import("./pages/7CommonProblemsinFieldWorkerHiringforLandscapingCompanies"));
 const WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring = lazy(() => import("./pages/WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring"));
 const StructuringYourFieldHiringPipelineforMaximumEfficiency = lazy(() => import("./pages/StructuringYourFieldHiringPipelineforMaximumEfficiency"));
+const HowAIPoweredHiringReducesOperationalChaosInIrrigationAndLandscapingCrews = lazy(() => import("./pages/HowAIPoweredHiringReducesOperationalChaosInIrrigationAndLandscapingCrews"));
 
 
 
@@ -78,6 +79,11 @@ const App = () => {
               <Route
                 path="/blog/structuring-your-field-hiring-pipeline-for-maximum-efficiency"
                 element={<StructuringYourFieldHiringPipelineforMaximumEfficiency/>}
+              />
+
+              <Route
+                path="/blog/ai-powered-hiring-landscaping-irrigation-crews"
+                element={<HowAIPoweredHiringReducesOperationalChaosInIrrigationAndLandscapingCrews/>}
               />
 
               <Route path="*" element={<NotFound />} />
