@@ -8,6 +8,8 @@ import blog3 from "@/assets/blog/Why-Manual-Screening-Slows-Down-Landscaping-And
 import blog4 from "@/assets/blog/Field-Hiring.jpg";
 import blog5 from "@/assets/blog/AI-powered-hiring.jpg";
 import banner from "@/assets/blog/banner.jpg";
+import FieldTechnicians from "@/assets/blog/Field-Technicians.jpg";
+
 
 const Blog = () => {
 
@@ -19,6 +21,13 @@ const Blog = () => {
   }, []);
 
   const posts = [
+    {
+      id: 6,
+      title: "How Irrigation Companies Can Find Qualified Field Technicians Quickly",
+      image: FieldTechnicians,
+      link: "/blog/how-irrigation-companies-find-qualified-field-technicians-quickly",
+      alt: "Field Technicians",
+    },
     {
       id: 5,
       title: "How AI-Powered Hiring Reduces Operational Chaos in Irrigation and Landscaping Crews",

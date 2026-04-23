@@ -19,6 +19,8 @@ const CommonProblemsinFieldWorkerHiringforLandscapingCompanies = lazy(() => impo
 const WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring = lazy(() => import("./pages/WhyManualScreeningSlowsDownLandscapingAndIrrigationHiring"));
 const StructuringYourFieldHiringPipelineforMaximumEfficiency = lazy(() => import("./pages/StructuringYourFieldHiringPipelineforMaximumEfficiency"));
 const HowAIPoweredHiringReducesOperationalChaosInIrrigationAndLandscapingCrews = lazy(() => import("./pages/HowAIPoweredHiringReducesOperationalChaosInIrrigationAndLandscapingCrews"));
+const HowIrrigationCompaniesCanFindQualifiedFieldTechniciansQuickly = lazy(() => import("./pages/HowIrrigationCompaniesCanFindQualifiedFieldTechniciansQuickly"));
+
 
 
 
@@ -84,6 +86,11 @@ const App = () => {
               <Route
                 path="/blog/ai-powered-hiring-landscaping-irrigation-crews"
                 element={<HowAIPoweredHiringReducesOperationalChaosInIrrigationAndLandscapingCrews/>}
+              />
+
+              <Route
+                path="/blog/how-irrigation-companies-find-qualified-field-technicians-quickly"
+                element={<HowIrrigationCompaniesCanFindQualifiedFieldTechniciansQuickly/>}
               />
 
               <Route path="*" element={<NotFound />} />
